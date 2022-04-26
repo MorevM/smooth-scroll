@@ -1,0 +1,113 @@
+@use 'more-sass' as *;
+@use '../utility/variables.scss' as *;
+
+.nav-toolbar {
+	$b: #{&};
+
+	@include pos-fix(null 0 0 0);
+	z-index: 1000;
+	padding: 15px;
+	pointer-events: none;
+
+	/* SETTINGS */
+	&__settings {
+		margin-bottom: 20px;
+	}
+
+	&__settings-inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin: -10px;
+	}
+
+	&__settings-group {
+		flex: 0 0 auto;
+		margin: 10px;
+	}
+
+	&__settings-group-label {
+		margin-bottom: .75em;
+		font-size: 90%;
+		line-height: 1.2;
+		font-weight: 700;
+		text-align: center;
+		user-select: none;
+	}
+
+	&__settings-group-content {}
+
+	&__selector {}
+
+	&__selector-inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: -5px;
+	}
+
+	&__selector-control {
+		display: inline-flex;
+		flex: 0 0 auto;
+		align-items: center;
+		margin: 5px;
+		font-size: 90%;
+		line-height: 1.2;
+		cursor: pointer;
+		pointer-events: auto;
+
+		input {
+			flex: 0 0 auto;
+			width: 18px;
+			height: 18px;
+			cursor: pointer;
+		}
+
+		p {
+			flex: 0 0 auto;
+			margin-right: .5em;
+			user-select: none;
+		}
+	}
+
+	/* LINKS */
+	&__links {}
+
+	&__links-inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: -3px;
+	}
+
+	&__links-item {
+		flex: 0 0 auto;
+		min-width: 2.25em;
+		margin: 3px;
+		padding: .5em;
+		color: $color-text-primary-main;
+		line-height: 1.2;
+		font-weight: 700;
+		text-align: center;
+		background-color: $color-background-primary-main;
+		border: 1px solid;
+		border-radius: 2px;
+		transition-property: background-color, border-color, color;
+		transition-duration: .2s;
+		transition-timing-function: ease-out;
+		transition-delay: 0s;
+		pointer-events: auto;
+
+		&:hover,
+		&:focus-visible {
+			color: $color-background-primary-main;
+			background-color: $color-text-primary-main;
+			border-color: $color-text-primary-main;
+		}
+
+		&:active {
+			transform: translateY(1px);
+		}
+	}
+}

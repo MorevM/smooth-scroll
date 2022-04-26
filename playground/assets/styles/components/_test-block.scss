@@ -1,0 +1,100 @@
+@use 'more-sass' as *;
+@use '../utility/variables.scss' as *;
+
+.test-block {
+	$b: #{&};
+
+	@include box(100%, 75vh);
+	position: relative;
+	z-index: 0;
+	flex: 0 0 auto;
+	padding: 25px 50px;
+
+	&:focus {
+		box-shadow: inset 0 0 0 3px $color-app-primary-main;
+		outline: 0;
+	}
+
+	&.style-odd {}
+
+	&.style-even {
+		background-color: $color-background-primary-main-tone5;
+	}
+
+	&.style-large {
+		@include box(100%, 150vh);
+
+		.theme-horizontal & {
+			@include box(150vw, 100%);
+		}
+	}
+
+	.theme-horizontal & {
+		@include box(75vw, 100%);
+		padding: 50px 25px;
+		border-width: 0 1px;
+	}
+
+	/* TITLE */
+	&__title {
+		@include fluid-font(($layout-screen-min, $typo-h2-min), ($layout-screen-max, $typo-h2-max));
+		margin-bottom: 1em;
+	}
+
+	/* INNER BLOCKS */
+	&__inner-block {
+		max-width: 800px;
+		max-height: 300px;
+		padding: 1.5em;
+		overflow: hidden;
+		overflow-y: auto;
+
+		.style-odd & {
+			background-color: $color-background-primary-main-tone5;
+		}
+
+		.style-even & {
+			background-color: $color-background-primary-main;
+		}
+
+		p {
+			margin-bottom: 1em;
+		}
+
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__inner-block-links {
+		// no rules
+
+		a {
+			display: inline-block;
+			margin-right: 1em;
+			font-size: 90%;
+			line-height: 1.2;
+			border-bottom: 1px dotted;
+			transition: border-color .2s ease-out 0s;
+
+			&:hover,
+			&:focus-visible {
+				border-color: transparent;
+			}
+
+			&:active {
+				transform: translateY(1px);
+			}
+		}
+	}
+
+	/* RULER */
+	&__ruler {
+		@include pos-abs(0 auto 0 0);
+		@include margin(auto);
+
+		.theme-horizontal & {
+			@include pos-abs(0 0 auto 0);
+		}
+	}
+}

@@ -1,0 +1,121 @@
+{
+	"name": "@morev/smooth-scroll",
+	"description": "The last script for animated scrolling you ever need",
+	"type": "module",
+	"version": "0.0.4",
+	"private": false,
+	"engines": {
+		"node": "^14.17.0 || >=16.0.0"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Maxim Morev",
+		"email": "max.seainside@gmail.com"
+	},
+	"homepage": "https://github.com/MorevM/smooth-scroll#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MorevM/smooth-scroll"
+	},
+	"bugs": {
+		"url": "https://github.com/MorevM/smooth-scroll/issues"
+	},
+	"files": [
+		"dist",
+		"types"
+	],
+	"exports": {
+		".": {
+			"import": "./dist/smooth-scroll.mjs",
+			"require": "./dist/smooth-scroll.cjs",
+			"browser": "./dist/smooth-scroll.js"
+		},
+		"./native": {
+			"import": "./dist/native.mjs",
+			"require": "./dist/native.cjs",
+			"browser": "./dist/native.js"
+		},
+		"./vue": {
+			"import": "./dist/vue.mjs",
+			"require": "./dist/vue.cjs",
+			"browser": "./dist/vue.js"
+		},
+		"./nuxt": {
+			"import": "./dist/nuxt.mjs",
+			"require": "./dist/nuxt.cjs"
+		}
+	},
+	"main": "./dist/smooth-scroll.cjs",
+	"module": "./dist/smooth-scroll.mjs",
+	"browser": "./dist/smooth-scroll.js",
+	"typesVersions": {
+		"*": {
+			"*": [
+				"./types/smooth-scroll.d.ts"
+			],
+			"native": [
+				"./types/smooth-scroll-native.d.ts"
+			]
+		}
+	},
+	"scripts": {
+		"dev": "yarn _compile:dev",
+		"build": "yarn _compile:prod && cp ./src/nuxt-plugin.js ./dist/nuxt-plugin.js",
+		"prepare": "husky install .husky/ && playwright install chromium && yarn _more-sass-clone",
+		"vscode-settings": "cp .vscode/settings.template.json .vscode/settings.json",
+		"release": "release-it --disable-metrics",
+		"lint": "yarn lint:eslint && yarn lint:stylelint",
+		"lint:fix": "yarn lint:eslint:fix && yarn lint:stylelint:fix",
+		"lint:eslint": "eslint \"**/*.{js,vue,json,json5,jsonc,yml,yaml,md}\"",
+		"lint:eslint:fix": "eslint \"**/*.{js,vue,json,json5,jsonc,yml,yaml,md}\" --fix",
+		"lint:stylelint": "stylelint \"**/*.{css,scss}\" --allow-empty-input",
+		"lint:stylelint:fix": "stylelint \"**/*.{css,scss}\" --fix --allow-empty-input",
+		"test": "nyc playwright test --forbid-only",
+		"test:dev": "chokidar \"__tests__/tests/**/*.spec.js\" -c \"playwright test\"",
+		"_compile:dev": "rollup --config rollup.config.dev.mjs --environment NODE_ENV:development --watch",
+		"_compile:prod": "rollup --config rollup.config.prod.mjs --environment NODE_ENV:production",
+		"_compile:test": "rollup --config rollup.config.dev.mjs --environment NODE_ENV:test",
+		"_more-sass-clone": "rm -rf .more-sass/ && cp -r node_modules/more-sass .more-sass/"
+	},
+	"dependencies": {
+		"@morev/helpers": "^0.14.0",
+		"@nuxt/kit": "npm:@nuxt/kit-edge@latest",
+		"js-easing-functions": "^1.0.3"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.17.9",
+		"@babel/plugin-transform-runtime": "^7.17.0",
+		"@babel/preset-env": "^7.16.11",
+		"@babel/runtime": "^7.17.9",
+		"@babel/runtime-corejs3": "^7.17.9",
+		"@istanbuljs/load-nyc-config": "^1.1.0",
+		"@morev/commitlint-config": "^0.1.1",
+		"@morev/eslint-config": "^11.1.0",
+		"@morev/stylelint-config": "^1.0.3",
+		"@playwright/test": "^1.21.0",
+		"@release-it/conventional-changelog": "^4.2.2",
+		"@rollup/plugin-babel": "^5.3.1",
+		"@rollup/plugin-commonjs": "^21.0.3",
+		"@rollup/plugin-node-resolve": "^13.2.0",
+		"babel-plugin-istanbul": "^6.1.1",
+		"chokidar-cli": "^3.0.0",
+		"core-js": "^3.21.1",
+		"eslint": "^8.13.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.3.7",
+		"more-sass": "^1.0.7",
+		"nyc": "^15.1.0",
+		"postcss": "^8.4.12",
+		"postcss-discard-comments": "^5.1.1",
+		"postcss-discard-duplicates": "^5.1.0",
+		"postcss-preset-env": "^7.4.3",
+		"release-it": "^14.14.2",
+		"rollup": "^2.70.1",
+		"rollup-plugin-livereload": "^2.0.5",
+		"rollup-plugin-scss": "^3.0.0",
+		"rollup-plugin-serve": "^1.1.0",
+		"rollup-plugin-terser": "^7.0.2",
+		"sass": "^1.50.0",
+		"stylelint": "^14.6.1"
+	}
+}

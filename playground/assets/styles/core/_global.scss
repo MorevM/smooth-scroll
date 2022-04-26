@@ -1,0 +1,53 @@
+@use 'more-sass' as *;
+@use '../utility/variables.scss' as *;
+
+html {
+	position: relative;
+	overflow: auto;
+	overflow-x: hidden;
+
+	&.theme-horizontal {
+		overflow: auto;
+		overflow-y: hidden;
+	}
+}
+
+body {
+	@include fluid-font(($layout-screen-min, $typo-default-min), ($layout-screen-max, $typo-default-max));
+	position: relative;
+	display: flex; // fix IE flexbox min-height problem
+	color: $color-text-primary-main;
+	font-family: $font-primary;
+	background-color: $color-background-primary-main;
+	overflow: hidden;
+
+	.theme-horizontal & {
+		display: inline-block;
+	}
+}
+
+#root {
+	position: relative;
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	width: 100vw;
+	min-width: $layout-screen-min;
+	min-height: 100vh;
+
+	.theme-horizontal & {
+		flex-direction: row;
+		width: auto;
+		min-width: 100vw;
+		height: 100vh;
+	}
+}
+
+.a11y-label {
+	@include visually-hidden;
+}
+
+:focus-visible,
+.focus-visible {
+	outline: 3px solid $color-app-primary-main;
+}

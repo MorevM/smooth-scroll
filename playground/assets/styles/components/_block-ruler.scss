@@ -1,0 +1,61 @@
+@use 'more-sass' as *;
+@use '../utility/variables.scss' as *;
+
+.block-ruler {
+	$b: #{&};
+	$division: #{&}__division;
+	$division-size: 5px;
+	$division-offset: 3px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	padding: 0 2px;
+	pointer-events: none;
+
+	.theme-horizontal & {
+		flex-direction: row;
+		padding: 2px 0;
+	}
+
+	/* DIVISION */
+	&__division {
+		position: relative;
+		display: block;
+		flex: 0 0 auto;
+		font-size: 10px;
+		line-height: 1;
+		text-align: center;
+		user-select: none;
+
+		&::after {
+			@include pseudo;
+			@include pos-abs(0 auto 0 calc(100% + $division-offset));
+			@include box($division-size, 1px);
+			@include margin(auto);
+			background-color: currentColor;
+
+			.theme-horizontal & {
+				@include pos-abs(calc(100% + $division-offset) 0 auto 0);
+				@include box(1px, $division-size);
+			}
+
+			@at-root
+			#{$division}:first-child::after,
+			#{$division}:last-child::after {
+				@include box(calc(100% + #{$division-size} + #{$division-offset}), 1px);
+				position: static;
+
+				.theme-horizontal & {
+					@include box(1px, calc(100% + #{$division-size} + #{$division-offset}));
+				}
+			}
+		}
+
+		&:first-child,
+		&:last-child {
+			font-size: 0;
+		}
+	}
+}

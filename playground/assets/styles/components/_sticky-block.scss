@@ -1,0 +1,40 @@
+@use 'more-sass' as *;
+@use '../utility/variables.scss' as *;
+
+.sticky-block {
+	$b: #{&};
+
+	position: relative;
+	z-index: 100;
+	background-color: $color-background-secondary-main;
+	transition-property: background-color;
+	transition-duration: .2s;
+	transition-timing-function: ease-out;
+	transition-delay: 0s;
+
+	&.pos-start {
+		@include box(100%, 70px);
+		top: -1px;
+
+		.theme-horizontal & {
+			@include box(70px, 100%);
+			top: auto;
+			left: -1px;
+		}
+	}
+
+	&.pos-end {
+		@include box(100%, 100px);
+		bottom: -1px;
+
+		.theme-horizontal & {
+			@include box(100px, 100%);
+			right: -1px;
+			bottom: auto;
+		}
+	}
+
+	&.is-fixed {
+		opacity: .25;
+	}
+}
