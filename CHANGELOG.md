@@ -1,5 +1,12 @@
 
 
+### [0.0.7](https://github.com/MorevM/smooth-scroll/compare/v0.0.6...v0.0.7) (2022-04-26)
+
+
+### Chores
+
+* Move @babel/runtime to dependencies ([05bf56a](https://github.com/MorevM/smooth-scroll/commit/05bf56a7ed22827b56cb1cfa5b9d97781a4a66ea))
+
 ### [0.0.6](https://github.com/MorevM/smooth-scroll/compare/v0.0.5...v0.0.6) (2022-04-26)
 
 
