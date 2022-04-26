@@ -78,6 +78,7 @@
 		"_more-sass-clone": "rm -rf .more-sass/ && cp -r node_modules/more-sass .more-sass/"
 	},
 	"dependencies": {
+		"@babel/runtime-corejs3": "^7.17.9",
 		"@morev/helpers": "^0.14.0",
 		"@nuxt/kit": "npm:@nuxt/kit-edge@latest",
 		"js-easing-functions": "^1.0.3"
@@ -87,7 +88,6 @@
 		"@babel/plugin-transform-runtime": "^7.17.0",
 		"@babel/preset-env": "^7.16.11",
 		"@babel/runtime": "^7.17.9",
-		"@babel/runtime-corejs3": "^7.17.9",
 		"@istanbuljs/load-nyc-config": "^1.1.0",
 		"@morev/commitlint-config": "^0.1.1",
 		"@morev/eslint-config": "^11.1.0",
