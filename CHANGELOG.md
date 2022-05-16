@@ -1,5 +1,17 @@
 
 
+## [0.1.0](https://github.com/MorevM/smooth-scroll/compare/v0.0.7...v0.1.0) (2022-05-16)
+
+
+### Features
+
+* Pass Nuxt module options to SmoothScroll instance ([a65f70c](https://github.com/MorevM/smooth-scroll/commit/a65f70c9574a7d2c9f2c8078096100675ab8428e))
+
+
+### Chores
+
+* Deps update ([9d567c9](https://github.com/MorevM/smooth-scroll/commit/9d567c9bda9f32cd03bc8573cc797a5f25388bae))
+
 ### [0.0.7](https://github.com/MorevM/smooth-scroll/compare/v0.0.6...v0.0.7) (2022-04-26)
 
 
