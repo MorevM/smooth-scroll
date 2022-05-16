@@ -6,7 +6,7 @@ import Vue from 'vue';
 // transform `import` to `require`, thats why where is defined full path
 // and `.cjs` extension.
 import { SmoothScroll } from '@morev/smooth-scroll/dist/smooth-scroll.cjs';
-const scroller = new SmoothScroll();
+const scroller = new SmoothScroll(<%= JSON.stringify(options.options || {}) %>);
 
 export default (ctx, inject) => {
 	inject('scroll', scroller.to.bind(scroller));
