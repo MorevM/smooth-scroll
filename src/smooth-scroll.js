@@ -580,6 +580,9 @@ class SmoothScroll {
 			disablePageScroll();
 			this._adjustPosition(dest);
 
+			document.documentElement.style.setProperty('scroll-behavior', 'auto');
+			this._scrollElement.style?.setProperty('scroll-behavior', 'auto');
+
 			this._setScrollPosition(dest)
 				.then(result => {
 					const [destX, destY] = this._getScrollValue(target);
@@ -595,6 +598,9 @@ class SmoothScroll {
 					if (this._options.autofocus) {
 						this._setFocus(getElement(target, this._scrollElement));
 					}
+
+					document.documentElement.style.removeProperty('scroll-behavior');
+					this._scrollElement.style?.removeProperty('scroll-behavior');
 
 					enablePageScroll();
 
