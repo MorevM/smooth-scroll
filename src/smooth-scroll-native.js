@@ -15,7 +15,7 @@ class SmoothScrollNative extends SmoothScroll {
 		const self = this;
 		const [endX, endY] = value;
 
-		return new Promise(resolve => {
+		return new Promise((resolve) => {
 			(function onScroll() {
 				self._scrollElement.addEventListener('scroll', onScroll);
 				const [nowX, nowY] = self._getCurrentScroll();

@@ -213,7 +213,7 @@ class SmoothScroll {
 		const [endX, endY] = value;
 
 		const [changeX, changeY] = [endX - startX, endY - startY];
-		const [deltaX, deltaY] = [changeX, changeY].map(v => Math.abs(v));
+		const [deltaX, deltaY] = [changeX, changeY].map((v) => Math.abs(v));
 
 		const adjustX = startX + (deltaX > 1 ? changeX / deltaX : 0);
 		const adjustY = startY + (deltaY > 1 ? changeY / deltaY : 0);
@@ -265,7 +265,7 @@ class SmoothScroll {
 	 *
 	 * @protected
 	 */
-	_adjustScrollAlignment = (value, element) => {
+	_adjustScrollAlignment(value, element) {
 		let [valueX, valueY] = value;
 
 		const elementWidth = element.offsetWidth;
@@ -299,7 +299,7 @@ class SmoothScroll {
 		}
 
 		return [valueX, valueY];
-	};
+	}
 
 	/**
 	 * Adjusts a given scroll position considering the `scroll-margin-*` properties.
@@ -311,7 +311,7 @@ class SmoothScroll {
 	 *
 	 * @protected
 	 */
-	_adjustScrollMargin = (value, element) => {
+	_adjustScrollMargin(value, element) {
 		let [valueX, valueY] = value;
 
 		const styles = window.getComputedStyle(element);
@@ -351,7 +351,7 @@ class SmoothScroll {
 		}
 
 		return [valueX, valueY];
-	};
+	}
 
 	/**
 	 * Adjusts a given scroll position considering the `fixedElements` option.
@@ -363,7 +363,7 @@ class SmoothScroll {
 	 *
 	 * @protected
 	 */
-	_adjustScrollFixedElements = (value, element) => {
+	_adjustScrollFixedElements(value, element) {
 		let [valueX, valueY] = value;
 		const fixedValues = this._calcFixedElements();
 
@@ -398,7 +398,7 @@ class SmoothScroll {
 		}
 
 		return [valueX, valueY];
-	};
+	}
 
 	/**
 	 * Adjusts a given scroll position considering the `offset` option.
@@ -410,14 +410,14 @@ class SmoothScroll {
 	 *
 	 * @protected
 	 */
-	_adjustScrollOffset = (value, element) => {
+	_adjustScrollOffset(value, element) {
 		let [valueX, valueY] = value;
 
 		valueX += this._options.offset.x;
 		valueY += this._options.offset.y;
 
 		return [valueX, valueY];
-	};
+	}
 
 	/**
 	 * Retrieves the needed scroll position value (for both x and y axis) based on a given target element.
@@ -521,7 +521,7 @@ class SmoothScroll {
 		const [endX, endY] = value;
 
 		const [changeX, changeY] = [endX - startX, endY - startY];
-		const [deltaX, deltaY] = [changeX, changeY].map(v => Math.abs(v));
+		const [deltaX, deltaY] = [changeX, changeY].map((v) => Math.abs(v));
 
 		const { easing } = this._options;
 		const duration = this._getDuration(Math.max(deltaX, deltaY), customDuration);
@@ -584,7 +584,7 @@ class SmoothScroll {
 			this._scrollElement.style?.setProperty('scroll-behavior', 'auto');
 
 			this._setScrollPosition(dest)
-				.then(result => {
+				.then((result) => {
 					const [destX, destY] = this._getScrollValue(target);
 					const [resX, resY] = result;
 
@@ -594,7 +594,7 @@ class SmoothScroll {
 
 					return result;
 				})
-				.then(result => {
+				.then((result) => {
 					if (this._options.autofocus) {
 						this._setFocus(getElement(target, this._scrollElement));
 					}
