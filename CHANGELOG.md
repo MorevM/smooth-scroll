@@ -1,5 +1,23 @@
 
 
+### [0.1.1](https://github.com/MorevM/smooth-scroll/compare/v0.1.0...v0.1.1) (2022-05-29)
+
+
+### Bug fixes
+
+* Fix `scroll-behavior` CSS property issue ([9fc5dbe](https://github.com/MorevM/smooth-scroll/commit/9fc5dbe11b9d8eeedad89aca23c45c603093ac45))
+
+
+### Refactoring
+
+* Consistent usage of arrow functions ([1acbc1e](https://github.com/MorevM/smooth-scroll/commit/1acbc1ec3926aed52975b866c14d7cf091059c68))
+
+
+### Chores
+
+* Setup dependabot ([ecd187e](https://github.com/MorevM/smooth-scroll/commit/ecd187edad95fa2a436a0e0c7fb7bfb72eefa424))
+* Update dependencies ([f8226de](https://github.com/MorevM/smooth-scroll/commit/f8226de7b77a23daef4c07dffb5cb8102ddd3927))
+
 ## [0.1.0](https://github.com/MorevM/smooth-scroll/compare/v0.0.7...v0.1.0) (2022-05-16)
 
 
