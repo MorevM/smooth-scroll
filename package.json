@@ -78,7 +78,7 @@
 		"_more-sass-clone": "rm -rf .more-sass/ && cp -r node_modules/more-sass .more-sass/"
 	},
 	"dependencies": {
-		"@babel/runtime-corejs3": "^7.18.3",
+		"@babel/runtime-corejs3": "^7.18.9",
 		"@morev/helpers": "^0.19.1",
 		"@nuxt/kit": "npm:@nuxt/kit-edge@latest",
 		"js-easing-functions": "^1.0.3"
