@@ -103,7 +103,7 @@
 		"eslint": "^8.16.0",
 		"husky": "^8.0.1",
 		"lint-staged": "^12.4.2",
-		"more-sass": "^1.0.7",
+		"more-sass": "^2.0.1",
 		"nyc": "^15.1.0",
 		"postcss": "^8.4.14",
 		"postcss-discard-comments": "^5.1.2",
