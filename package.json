@@ -105,7 +105,7 @@
 		"lint-staged": "^12.4.2",
 		"more-sass": "^1.0.7",
 		"nyc": "^15.1.0",
-		"postcss": "^8.4.14",
+		"postcss": "^8.4.17",
 		"postcss-discard-comments": "^5.1.2",
 		"postcss-discard-duplicates": "^5.1.0",
 		"postcss-preset-env": "^7.6.0",
