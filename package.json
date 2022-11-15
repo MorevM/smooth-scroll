@@ -94,7 +94,7 @@
 		"@morev/stylelint-config": "^1.1.0",
 		"@playwright/test": "^1.22.2",
 		"@release-it/conventional-changelog": "^5.0.0",
-		"@rollup/plugin-babel": "^5.3.1",
+		"@rollup/plugin-babel": "^6.0.2",
 		"@rollup/plugin-commonjs": "^22.0.0",
 		"@rollup/plugin-node-resolve": "^13.3.0",
 		"babel-plugin-istanbul": "^6.1.1",
