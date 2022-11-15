@@ -1,5 +1,12 @@
 
 
+### [0.1.2](https://github.com/MorevM/smooth-scroll/compare/v0.1.1...v0.1.2) (2022-11-15)
+
+
+### Chores
+
+* Set fixed version of @nuxt/kit ([0c12270](https://github.com/MorevM/smooth-scroll/commit/0c122707380b476ca69b3dfc7e1266c66f609ed7))
+
 ### [0.1.1](https://github.com/MorevM/smooth-scroll/compare/v0.1.0...v0.1.1) (2022-05-29)
 
 
