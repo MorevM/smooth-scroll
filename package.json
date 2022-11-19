@@ -112,7 +112,7 @@
 		"release-it": "^15.0.0",
 		"rollup": "^2.75.3",
 		"rollup-plugin-livereload": "^2.0.5",
-		"rollup-plugin-scss": "^3.0.0",
+		"rollup-plugin-scss": "^4.0.0",
 		"rollup-plugin-serve": "^1.1.0",
 		"rollup-plugin-terser": "^7.0.2",
 		"sass": "^1.52.1",
