@@ -79,7 +79,7 @@
 	},
 	"dependencies": {
 		"@babel/runtime-corejs3": "^7.18.3",
-		"@morev/helpers": "^0.19.1",
+		"@morev/helpers": "^1.19.2",
 		"@nuxt/kit": "^3.0.0-rc.13",
 		"js-easing-functions": "^1.0.3"
 	},
