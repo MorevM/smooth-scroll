@@ -1,5 +1,16 @@
 
 
+## [1.0.0](https://github.com/MorevM/smooth-scroll/compare/v0.1.2...v1.0.0) (2024-01-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* As updated `@morev/helpers` package includes `ohash` dependency, an additional transpile option may be required.
+
+### Chores
+
+* Upgrade `@morev/helpers` package to latest ([01b06ee](https://github.com/MorevM/smooth-scroll/commit/01b06ee6b2903019a7de3e784529c47244e87ac1))
+
 ### [0.1.2](https://github.com/MorevM/smooth-scroll/compare/v0.1.1...v0.1.2) (2022-11-15)
 
 
