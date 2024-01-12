@@ -429,7 +429,7 @@ class SmoothScroll {
 	 * @protected
 	 */
 	_getElementScrollValue(element) {
-		let { left: valueX, top: valueY } = getElementOffset(element, 'both', this._scrollElement);
+		let { x: valueX, y: valueY } = getElementOffset(element, 'both', this._scrollElement);
 
 		[valueX, valueY] = this._adjustScrollAlignment([valueX, valueY], element);
 		[valueX, valueY] = this._adjustScrollMargin([valueX, valueY], element);

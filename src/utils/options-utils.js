@@ -1,6 +1,6 @@
-import { createDefaults, isObject } from '@morev/helpers';
+import { createMergeObjects, isObject } from '@morev/helpers';
 
-export const defaults = createDefaults((obj, key, value, stack) => {
+export const defaults = createMergeObjects((obj, key, value, stack) => {
 	if (stack === 'offset') {
 		obj[key] += value;
 		return true;
