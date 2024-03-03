@@ -1,21 +1,19 @@
 import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import { babel } from '@rollup/plugin-babel';
-import { terser } from 'rollup-plugin-terser';
 
 const ROOT_PATH = path.resolve('./').replace(/\\/g, '/');
 const SRC_PATH = `${ROOT_PATH}/src`;
 const DIST_PATH = `${ROOT_PATH}/dist`;
 
 const formatMappings = [
-	{ format: 'esm', extension: 'mjs', useBabel: false },
-	{ format: 'cjs', extension: 'cjs', useBabel: false },
-	{ format: 'umd', extension: 'js', useBabel: true, name: 'SmoothScroll' },
+	{ format: 'esm', extension: 'mjs' },
+	{ format: 'cjs', extension: 'cjs' },
+	{ format: 'umd', extension: 'js', name: 'SmoothScroll' },
 ];
 
 const processFiles = (...files) => files.reduce((acc, [entry, output]) => {
-	formatMappings.forEach(({ format, extension, name, useBabel }) => {
+	formatMappings.forEach(({ format, extension, name }) => {
 		acc.push({
 			input: `${SRC_PATH}/${entry}.js`,
 			output: {
@@ -25,18 +23,10 @@ const processFiles = (...files) => files.reduce((acc, [entry, output]) => {
 				exports: 'named',
 				sourcemap: true,
 			},
-			external: ['@morev/utils', 'js-easing-functions', /@babel\/runtime/, '@nuxt/kit'],
+			external: ['@morev/utils', 'js-easing-functions', '@nuxt/kit'],
 			plugins: [
 				resolve(),
 				commonjs(),
-				babel({
-					babelHelpers: 'runtime',
-					exclude: new RegExp('/node_modules/'),
-					babelrc: false,
-					presets: [['@babel/preset-env', { useBuiltIns: false }]],
-					plugins: [['@babel/plugin-transform-runtime', { corejs: 3 }]],
-				}),
-				// terser(),
 			].filter(Boolean),
 		});
 	});
