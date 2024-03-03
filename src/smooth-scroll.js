@@ -8,7 +8,7 @@ import {
 	isNullish,
 	isNumeric,
 	getScrollableAncestor,
-} from '@morev/helpers';
+} from '@morev/utils';
 import { disablePageScroll, enablePageScroll } from './utils/scroll-utils.js';
 import { defaults, normalizeOptions } from './utils/options-utils.js';
 import { easeInOutQuad } from './easing.js';

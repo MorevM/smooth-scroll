@@ -1,4 +1,4 @@
-import { createMergeObjects, isObject } from '@morev/helpers';
+import { createMergeObjects, isObject } from '@morev/utils';
 
 export const defaults = createMergeObjects((obj, key, value, stack) => {
 	if (stack === 'offset') {

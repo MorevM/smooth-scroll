@@ -25,7 +25,7 @@ const processFiles = (...files) => files.reduce((acc, [entry, output]) => {
 				exports: 'named',
 				sourcemap: true,
 			},
-			external: ['@morev/helpers', 'js-easing-functions', /@babel\/runtime/, '@nuxt/kit'],
+			external: ['@morev/utils', 'js-easing-functions', /@babel\/runtime/, '@nuxt/kit'],
 			plugins: [
 				resolve(),
 				commonjs(),

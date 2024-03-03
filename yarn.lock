@@ -1924,15 +1924,6 @@
     vue-eslint-parser "^9.0.2"
     yaml-eslint-parser "^1.0.1"
 
-"@morev/helpers@^1.19.2":
-  version "1.19.2"
-  resolved "https://registry.yarnpkg.com/@morev/helpers/-/helpers-1.19.2.tgz#7e3291965ce07f96bb83cec959e4b441102bf463"
-  integrity sha512-NZTaLMWp1ewJiyeTpvbWl/swpPxJX7Hc/Mhq/SpsHLyRhYc3MGD15B2FfAYBoOenD17RI7nAAY/RfbrvGSvmyw==
-  dependencies:
-    fast-copy "^3.0.0"
-    fast-equals "^4.0.3"
-    ohash "^1.0.0"
-
 "@morev/stylelint-config@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@morev/stylelint-config/-/stylelint-config-1.1.0.tgz#03a21fdceeae15c549063bc80d128fa26f180123"
@@ -1951,6 +1942,16 @@
     stylelint-selector-no-empty "^1.0.8"
     stylelint-selector-tag-no-without-class "^2.0.5"
     stylelint-use-nesting "^3.0.0"
+
+"@morev/utils@^3.6.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@morev/utils/-/utils-3.6.0.tgz#09206326ef2f7d6f1d8c518cd54106c6805c8db3"
+  integrity sha512-eTah9plhk18SFiMriOEOmBCYW9LhDlDWqbO0/hc+wpIzH1OXGz2Ei5VlairgSTEFTaSk9MyhrlaWby0jUzjx4A==
+  dependencies:
+    fast-copy "^3.0.1"
+    fast-equals "^5.0.1"
+    ohash "^1.1.3"
+    type-fest "^4.10.2"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -4421,7 +4422,7 @@ external-editor@^3.0.3:
     iconv-lite "^0.4.24"
     tmp "^0.0.33"
 
-fast-copy@^3.0.0:
+fast-copy@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-3.0.1.tgz#9e89ef498b8c04c1cd76b33b8e14271658a732aa"
   integrity sha512-Knr7NOtK3HWRYGtHoJrjkaWepqT8thIVGAwt0p0aUs1zqkAzXZV4vo9fFNwyb5fcqK1GKYFYxldQdIDVKhUAfA==
@@ -4431,10 +4432,10 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
-fast-equals@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/fast-equals/-/fast-equals-4.0.3.tgz#72884cc805ec3c6679b99875f6b7654f39f0e8c7"
-  integrity sha512-G3BSX9cfKttjr+2o1O22tYMLq0DPluZnYtq1rXumE1SpL/F/SLIfHx08WYQoWSIpeMYf8sRbJ8++71+v6Pnxfg==
+fast-equals@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/fast-equals/-/fast-equals-5.0.1.tgz#a4eefe3c5d1c0d021aeed0bc10ba5e0c12ee405d"
+  integrity sha512-WF1Wi8PwwSY7/6Kx0vKXtw8RwuSGoM1bvDaJbu7MxDlR1vovZjIAKrnzyrThgAjm6JDTu0fVgWXDlMGspodfoQ==
 
 fast-glob@^3.2.11, fast-glob@^3.2.5, fast-glob@^3.2.9:
   version "3.2.11"
@@ -6622,7 +6623,7 @@ object.values@^1.1.5:
     define-properties "^1.1.3"
     es-abstract "^1.19.1"
 
-ohash@^1.0.0:
+ohash@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/ohash/-/ohash-1.1.3.tgz#f12c3c50bfe7271ce3fd1097d42568122ccdcf07"
   integrity sha512-zuHHiGTYTA1sYJ/wZN+t5HKZaH23i4yI1HMwbuXm24Nid7Dv0KcuRlKoNKS9UNfAVSBlnGLcuQrnOKWOZoEGaw==
@@ -8882,6 +8883,11 @@ type-fest@^2.5.1:
   version "2.12.2"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.12.2.tgz#80a53614e6b9b475eb9077472fb7498dc7aa51d0"
   integrity sha512-qt6ylCGpLjZ7AaODxbpyBZSs9fCI9SkL3Z9q2oxMBQhs/uyY+VD8jHA8ULCGmWQJlBgqvO3EJeAngOHD8zQCrQ==
+
+type-fest@^4.10.2:
+  version "4.10.3"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.10.3.tgz#ff01cb0a1209f59583d61e1312de9715e7ea4874"
+  integrity sha512-JLXyjizi072smKGGcZiAJDCNweT8J+AuRxmPZ1aG7TERg4ijx9REl8CNhbr36RV4qXqL1gO1FF9HL8OkVmmrsA==
 
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"

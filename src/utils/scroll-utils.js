@@ -1,4 +1,4 @@
-import { supportsPassive } from '@morev/helpers';
+import { supportsPassive } from '@morev/utils';
 
 const KEYS_AFFECTING_SCROLL = [
 	'ArrowUp',
