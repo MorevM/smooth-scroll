@@ -1,5 +1,6 @@
 @use 'more-sass' as *;
 @use '../utility/variables.scss' as *;
+@use '../utility/mixins.scss' as *;
 
 html {
 	position: relative;
@@ -13,7 +14,7 @@ html {
 }
 
 body {
-	@include fluid-font(($layout-screen-min, $typo-default-min), ($layout-screen-max, $typo-default-max));
+	@include fluid-font($typo-default-min, $typo-default-max);
 	position: relative;
 	display: flex; // fix IE flexbox min-height problem
 	color: $color-text-primary-main;

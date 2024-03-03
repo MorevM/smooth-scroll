@@ -1,5 +1,5 @@
-import { SmoothScroll } from '../../../src/smooth-scroll.js'; // eslint-disable-line no-unused-vars
-import { SmoothScrollNative } from '../../../src/smooth-scroll-native.js'; // eslint-disable-line no-unused-vars
+import { SmoothScroll } from '../../../src/smooth-scroll.js';
+import { SmoothScrollNative } from '../../../src/smooth-scroll-native.js';
 
 // Settings
 const settings = ['axis', 'alignment'].reduce((acc, name) => {
@@ -155,7 +155,7 @@ document.addEventListener('click', (e) => {
 	window.addEventListener('load', initSticky);
 	window.addEventListener('resize', initSticky);
 	window.addEventListener('scroll', initSticky, { passive: true });
-}());
+})();
 
 // Test mode
 window._sut = {

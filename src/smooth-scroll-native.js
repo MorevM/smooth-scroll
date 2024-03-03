@@ -24,7 +24,7 @@ class SmoothScrollNative extends SmoothScroll {
 					self._scrollElement.removeEventListener('scroll', onScroll);
 					resolve([endX, endY]);
 				}
-			}());
+			})();
 
 			if ('scrollBehavior' in document.documentElement.style) {
 				self._scrollElement.scrollTo({ top: endY, left: endX, behavior: 'smooth' });

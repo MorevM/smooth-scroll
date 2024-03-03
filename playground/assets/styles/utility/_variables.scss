@@ -1,16 +1,16 @@
 @use 'more-sass' as *;
+@use 'sass:color';
 
 /* COLORS */
 $_palette-primary: #148cd7;
 $_palette-light: #ffffff;
 $_palette-dark: #283237;
-$_palette-grey: #808080;
 
 // Colorscheme
 $color-app-primary-main: $_palette-primary;
 $color-app-primary-accent: $_palette-light;
 $color-background-primary-main: $_palette-dark;
-$color-background-primary-main-tone5: tint($_palette-dark, 5%);
+$color-background-primary-main-tone5: color.scale($_palette-dark, $lightness: 5%);
 $color-background-secondary-main: $_palette-light;
 $color-text-primary-main: $_palette-light;
 $color-text-secondary-main: $_palette-dark;

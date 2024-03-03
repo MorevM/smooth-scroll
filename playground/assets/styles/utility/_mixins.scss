@@ -1,0 +1,9 @@
+@use 'more-sass' as more;
+@use './_variables.scss' as variables;
+
+@mixin fluid-font($start, $end) {
+	@include more.use-fluid-font(
+		(variables.$layout-screen-min, $start),
+		(variables.$layout-screen-max, $end),
+	);
+}

@@ -1,5 +1,6 @@
 @use 'more-sass' as *;
 @use '../utility/variables.scss' as *;
+@use '../utility/mixins.scss' as *;
 
 .test-block {
 	$b: #{&};
@@ -29,15 +30,9 @@
 		}
 	}
 
-	.theme-horizontal & {
-		@include box(75vw, 100%);
-		padding: 50px 25px;
-		border-width: 0 1px;
-	}
-
 	/* TITLE */
 	&__title {
-		@include fluid-font(($layout-screen-min, $typo-h2-min), ($layout-screen-max, $typo-h2-max));
+		@include fluid-font($typo-h2-min, $typo-h2-max);
 		margin-bottom: 1em;
 	}
 
@@ -96,5 +91,11 @@
 		.theme-horizontal & {
 			@include pos-abs(0 0 auto 0);
 		}
+	}
+
+	.theme-horizontal & {
+		@include box(75vw, 100%);
+		padding: 50px 25px;
+		border-width: 0 1px;
 	}
 }

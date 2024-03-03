@@ -14,11 +14,6 @@
 	padding: 0 2px;
 	pointer-events: none;
 
-	.theme-horizontal & {
-		flex-direction: row;
-		padding: 2px 0;
-	}
-
 	/* DIVISION */
 	&__division {
 		position: relative;
@@ -36,11 +31,6 @@
 			@include margin(auto);
 			background-color: currentColor;
 
-			.theme-horizontal & {
-				@include pos-abs(calc(100% + $division-offset) 0 auto 0);
-				@include box(1px, $division-size);
-			}
-
 			@at-root
 			#{$division}:first-child::after,
 			#{$division}:last-child::after {
@@ -51,11 +41,21 @@
 					@include box(1px, calc(100% + #{$division-size} + #{$division-offset}));
 				}
 			}
+
+			.theme-horizontal & {
+				@include pos-abs(calc(100% + $division-offset) 0 auto 0);
+				@include box(1px, $division-size);
+			}
 		}
 
 		&:first-child,
 		&:last-child {
 			font-size: 0;
 		}
+	}
+
+	.theme-horizontal & {
+		flex-direction: row;
+		padding: 2px 0;
 	}
 }
