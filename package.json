@@ -2,6 +2,7 @@
 	"name": "@morev/smooth-scroll",
 	"description": "The last script for animated scrolling you ever need",
 	"type": "module",
+	"sideEffects": false,
 	"version": "1.0.0",
 	"private": false,
 	"engines": {
