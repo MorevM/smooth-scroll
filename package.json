@@ -62,7 +62,6 @@
 		"dev": "yarn _compile:dev",
 		"build": "yarn _compile:prod && cp ./src/nuxt-plugin.js ./dist/nuxt-plugin.js",
 		"prepare": "husky install .husky/ && playwright install chromium && yarn _more-sass-clone",
-		"vscode-settings": "cp .vscode/settings.template.json .vscode/settings.json",
 		"release": "release-it --disable-metrics",
 		"lint": "yarn lint:eslint && yarn lint:stylelint",
 		"lint:fix": "yarn lint:eslint:fix && yarn lint:stylelint:fix",
