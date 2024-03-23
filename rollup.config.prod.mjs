@@ -2,7 +2,7 @@ import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 
-const ROOT_PATH = path.resolve('./').replace(/\\/g, '/');
+const ROOT_PATH = path.resolve('./').replaceAll('\\', '/');
 const SRC_PATH = `${ROOT_PATH}/src`;
 const DIST_PATH = `${ROOT_PATH}/dist`;
 

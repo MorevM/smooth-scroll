@@ -12,7 +12,7 @@ import postcssDiscardDuplicates from 'postcss-discard-duplicates';
 const IS_DEV = process.env.NODE_ENV === 'development';
 const IS_TEST = process.env.NODE_ENV === 'test';
 
-const ROOT_PATH = path.resolve('./').replace(/\\/g, '/');
+const ROOT_PATH = path.resolve('./').replaceAll('\\', '/');
 const PLAYGROUND_PATH = `${ROOT_PATH}/playground`;
 
 export default [
