@@ -23,17 +23,9 @@ export type Options = {
 	duration: number | [number, number] | readonly [number, number];
 
 	/**
-	 * TODO:
 	 * The easing function used during the scroll animation, `easeInOutQuad` by default.
 	 *
 	 * @see https://github.com/bameyrick/js-easing-functions#available-easing-functions.
-	 *
-	 * @param   time       [time description]
-	 * @param   begin      [begin description]
-	 * @param   change     [change description]
-	 * @param   duration   [duration description]
-	 *
-	 * @returns            [return description]
 	 */
 	easing: (time: number, begin: number, change: number, duration: number) => number;
 
