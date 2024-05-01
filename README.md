@@ -1,6 +1,6 @@
 # @morev/smooth-scroll (still WIP)
 
-![Stability of "master" branch](https://img.shields.io/github/workflow/status/MorevM/smooth-scroll/Build/master)
+![Stability of "master" branch](https://img.shields.io/github/actions/workflow/status/MorevM/smooth-scroll/build.yaml?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Last commit](https://img.shields.io/github/last-commit/morevm/smooth-scroll)
 ![Release version](https://img.shields.io/github/v/release/morevm/smooth-scroll?include_prereleases)
@@ -122,13 +122,11 @@ Vue.use(SmoothScroll, {/* custom options */});
 
 ```ts
 {
-  element: HTMLElement | Window | 'auto;
+  element: HTMLElement | Window | 'auto'; // default is 'auto'
 }
 ```
 
 The element being scrolled, `window` object, or `auto` for getting the nearest scrollable ancestor element.
-
-Default value: `auto`.
 
 > The value `auto` is suitable in most cases, but sometimes it may cause some unexpected behavior,
 > mostly in scenarios involving fixed elements and/or not unique selectors. \
@@ -139,7 +137,7 @@ Default value: `auto`.
 
 ```ts
 {
-  duration: number | [number, number];
+  duration: number | [number, number];  // default is `[300, 700]`
 }
 ```
 
@@ -152,48 +150,41 @@ There can also be supplied an array of two values which first value is duration 
 
 Does not affects while using `smooth-scroll-native`.
 
-Default value: `[300, 700]`.
-
 ### easing
 
 ```ts
 {
+  // Default value: imported `easeInOutQuad` function
   easing: (time: number, begin: number, change: number, duration: number) => number;
 }
 ```
 
 The easing function used during the scroll animation.\
-Can be one of [js-easing-functions](https://github.com/bameyrick/js-easing-functions#available-easing-functions) (included as dependency).\
+Can be one of [js-easing-functions](https://github.com/bameyrick/js-easing-functions#available-easing-functions) (included as a dependency).\
 See the example ["Custom animation"](#custom-animation).
 
 Does not affects while using `smooth-scroll-native`.
-
-Default value: imported `easeInOutQuad` function.
 
 ### ifNeeded
 
 ```ts
 {
-  ifNeeded: boolean;
+  ifNeeded: boolean; // default is `false`
 }
 ```
 
 Whether to not invoke scrolling if target position is already in viewport.
 
-Default value: `false`.
-
 ### autofocus
 
 ```ts
 {
-  autofocus: boolean;
+  autofocus: boolean; // default is `false`
 }
 ```
 
-Whether to set focus to the target element after scrolling.\
+Whether to set focus to the target element after scrolling. \
 Affects only if a given target is an element/selector.
-
-Default value: `false`.
 
 > It is strongly recommended to set this option to `true`, at least while navigating through the page.
 
@@ -201,33 +192,29 @@ Default value: `false`.
 
 ```ts
 {
-  block: 'start' | 'end' | 'center';
+  block: 'start' | 'end' | 'center'; // default is 'start'
 }
 ```
 
 Alignment of the target element after scrolling by x-axis.\
 Affects only if a given target is an element/selector.
 
-Default value: `start`.
-
 ### inline
 
 ```ts
 {
-  inline: 'start' | 'end' | 'center';
+  inline: 'start' | 'end' | 'center'; // default is 'start'
 }
 ```
 
 Alignment of the target element after scrolling by y-axis.\
 Affects only if a given target is an element/selector.
 
-Default value: `start`.
-
 ### offset
 
 ```ts
 {
-  offset: number | { x: number; y: number; };
+  offset: number | { x: number; y: number; }; // default is `{ x: 0, y: 0 }`
 }
 ```
 
@@ -239,18 +226,15 @@ Affects only if a given target is an element/selector.
 
 Additional offset added to the result x-axis position value.
 
-Default value: `0`.
-
 #### offset.y
 
 Additional offset added to the result y-axis position value.
-
-Default value: `0`.
 
 ### fixedElements
 
 ```ts
 {
+  // Empty by default
   fixedElements: {
     x: {
       start: Array<HTMLElement | string>;
@@ -271,25 +255,17 @@ Affects only if a given target is an element/selector.
 
 An array of elements whose sizes should be excluded from the result x-axis position value.
 
-Default value: `[]`.
-
 #### fixedElements.x.end
 
 An array of elements whose sizes should be included to the result x-axis position value.
-
-Default value: `[]`.
 
 #### fixedElements.y.start
 
 An array of elements whose sizes should be excluded from the result y-axis position value.
 
-Default value: `[]`.
-
 #### fixedElements.y.end
 
 An array of elements whose sizes should be included to the result y-axis position value.
-
-Default value: `[]`.
 
 ## API
 
@@ -306,7 +282,7 @@ Smoothly scrolls to a given target.
 
 **Returns:**
 
-`Promise<number[]>` - Promise object representing the array of result x and y scroll position.
+`Promise<number[]>` - Promise object representing the array of result `x` and `y` scroll position.
 
 **Example:**
 

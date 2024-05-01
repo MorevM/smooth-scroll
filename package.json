@@ -20,7 +20,11 @@
 	},
 	"bugs": {
 		"url": "https://github.com/MorevM/smooth-scroll/issues"
-	},
+	}, "keywords": [
+		"scroll",
+		"scrolling",
+		"smooth scroll"
+	],
 	"files": [
 		"dist",
 		"types"
