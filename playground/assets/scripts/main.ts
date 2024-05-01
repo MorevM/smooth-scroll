@@ -1,14 +1,14 @@
-import { SmoothScroll } from '../../../src/smooth-scroll.js';
-import { SmoothScrollNative } from '../../../src/smooth-scroll-native.js';
+import { SmoothScroll, SmoothScrollNative } from '../../../src/lib';
 
 // Settings
-const settings = ['axis', 'alignment'].reduce((acc, name) => {
-	acc[name] = document.querySelector(`[name="${name}"]:checked`).value;
+const settings = (['axis', 'alignment'] as const).reduce<{ axis: string; alignment: string }>((acc, name) => {
+	acc[name] = document.querySelector<HTMLInputElement>(`[name="${name}"]:checked`)!.value;
 	return acc;
-}, {});
+}, { axis: '', alignment: '' });
 
 document.addEventListener('change', async ({ target }) => {
-	const input = target;
+	const input = target as HTMLInputElement;
+	if (!input) return;
 	const { name, value } = input;
 
 	if (!Object.keys(settings).includes(name)) {
@@ -39,8 +39,8 @@ const pageScroller = () => new SmoothScroll({
 	element: window,
 	// duration: [300, 700],
 	// easing: easeInOutQuad,
-	block: settings.alignment,
-	inline: settings.alignment,
+	block: settings.alignment as any,
+	inline: settings.alignment as any,
 	autofocus: true,
 	fixedElements: {
 		x: settings.axis === 'x'
@@ -59,14 +59,14 @@ const pageScroller = () => new SmoothScroll({
 });
 
 const blockScroller = () => new SmoothScroll({
-	element: document.querySelector('[data-elem="inner-block"]'),
+	element: document.querySelector<HTMLElement>('[data-elem="inner-block"]')!,
 	duration: 400,
 	// easing: easeInOutQuad,
-	block: settings.alignment,
+	block: settings.alignment as any,
 });
 
-document.addEventListener('click', (e) => {
-	const link = e.target.closest('[data-use="SmoothScroll"]');
+document.addEventListener('click', (e: MouseEvent) => {
+	const link = (e.target as HTMLElement).closest<HTMLLinkElement>('[data-use="SmoothScroll"]');
 	if (!link) return;
 
 	let scroller;
@@ -75,11 +75,11 @@ document.addEventListener('click', (e) => {
 	if (link.dataset.scroller === 'block') {
 		scroller = blockScroller();
 		target = 'paragraph' in link.dataset
-			? `p:nth-child(${link.dataset.paragraph})`
+			? `p:nth-child(${link.dataset.paragraph!})`
 			: 0;
 	} else {
 		scroller = pageScroller();
-		target = link.hash;
+		target = link.getAttribute('href')!;
 	}
 
 	scroller
@@ -92,7 +92,7 @@ document.addEventListener('click', (e) => {
 // Sticky blocks
 (function initSticky() {
 	// Init elements
-	document.querySelectorAll('[data-elem="sticky-block"]').forEach((el) => {
+	document.querySelectorAll<HTMLDivElement>('[data-elem="sticky-block"]').forEach((el) => {
 		// Reset properties
 		el.style.removeProperty('position');
 		el.style.removeProperty('top');
@@ -102,7 +102,7 @@ document.addEventListener('click', (e) => {
 		el.classList.remove('is-fixed');
 
 		// Set up placeholder
-		let placeholder = el.nextElementSibling;
+		let placeholder = el.nextElementSibling as HTMLDivElement;
 
 		if (!('stickyPlaceholder' in placeholder.dataset)) {
 			placeholder = document.createElement('div');
@@ -124,7 +124,7 @@ document.addEventListener('click', (e) => {
 				: el.getBoundingClientRect().left <= window.innerWidth - el.offsetWidth;
 
 			if (isFixed) {
-				el.style.setProperty(el.dataset.align === 'start' ? 'left' : 'right', 0);
+				el.style.setProperty(el.dataset.align === 'start' ? 'left' : 'right', '0');
 				el.style.setProperty('position', 'fixed');
 				el.classList.add('is-fixed');
 
@@ -139,7 +139,7 @@ document.addEventListener('click', (e) => {
 				: el.getBoundingClientRect().top <= window.innerHeight - el.offsetHeight;
 
 			if (isFixed) {
-				el.style.setProperty(el.dataset.align === 'start' ? 'top' : 'bottom', 0);
+				el.style.setProperty(el.dataset.align === 'start' ? 'top' : 'bottom', '0');
 				el.style.setProperty('position', 'fixed');
 				el.classList.add('is-fixed');
 
@@ -158,6 +158,7 @@ document.addEventListener('click', (e) => {
 })();
 
 // Test mode
+/* @ts-expect-error -- For testing purposes only */
 window._sut = {
 	instance: null,
 	init(options = {}, native = false) {

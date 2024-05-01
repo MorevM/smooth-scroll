@@ -1,6 +1,7 @@
 import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import typescript from 'rollup-plugin-typescript2';
 
 const ROOT_PATH = path.resolve('./').replaceAll('\\', '/');
 const SRC_PATH = `${ROOT_PATH}/src`;
@@ -15,7 +16,7 @@ const formatMappings = [
 const processFiles = (...files) => files.reduce((acc, [entry, output]) => {
 	formatMappings.forEach(({ format, extension, name }) => {
 		acc.push({
-			input: `${SRC_PATH}/${entry}.js`,
+			input: `${SRC_PATH}/${entry}.ts`,
 			output: {
 				file: `${DIST_PATH}/${output}.${extension}`,
 				format,
@@ -25,6 +26,7 @@ const processFiles = (...files) => files.reduce((acc, [entry, output]) => {
 			},
 			external: ['@morev/utils', 'js-easing-functions', '@nuxt/kit'],
 			plugins: [
+				typescript(),
 				resolve(),
 				commonjs(),
 			].filter(Boolean),
@@ -34,8 +36,8 @@ const processFiles = (...files) => files.reduce((acc, [entry, output]) => {
 }, []).flat();
 
 export default processFiles(
-	['smooth-scroll', 'smooth-scroll'],
-	['smooth-scroll-native', 'native'],
+	['lib/smooth-scroll', 'smooth-scroll'],
+	['lib/smooth-scroll-native', 'native'],
 	['vue', 'vue'],
 	['easing', 'easing'],
 	['nuxt', 'nuxt'],

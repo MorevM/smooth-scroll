@@ -8,6 +8,7 @@ import postcss from 'postcss';
 import postcssPresetEnv from 'postcss-preset-env';
 import postcssDiscardComments from 'postcss-discard-comments';
 import postcssDiscardDuplicates from 'postcss-discard-duplicates';
+import typescript from 'rollup-plugin-typescript2';
 
 const IS_DEV = process.env.NODE_ENV === 'development';
 const IS_TEST = process.env.NODE_ENV === 'test';
@@ -19,7 +20,7 @@ export default [
 
 	// main.js
 	{
-		input: `${PLAYGROUND_PATH}/assets/scripts/main.js`,
+		input: `${PLAYGROUND_PATH}/assets/scripts/main.ts`,
 		output: {
 			file: `${PLAYGROUND_PATH}/build/main.js`,
 			format: 'iife',
@@ -27,6 +28,7 @@ export default [
 			sourcemap: true,
 		},
 		plugins: [
+			typescript(),
 			resolve(),
 			commonjs(),
 			serve({

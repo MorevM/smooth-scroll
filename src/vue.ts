@@ -1,4 +1,5 @@
-import { SmoothScroll } from './smooth-scroll.js';
+// @ts-nocheck -- nvm
+import { SmoothScroll } from './lib/smooth-scroll';
 
 const install = (Vue, options = {}) => {
 	Vue.prototype.$scroll = new SmoothScroll(options);

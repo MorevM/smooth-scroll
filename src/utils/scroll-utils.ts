@@ -1,25 +1,18 @@
 import { supportsPassive } from '@morev/utils';
 
 const KEYS_AFFECTING_SCROLL = [
-	'ArrowUp',
-	'ArrowDown',
-	'ArrowLeft',
-	'ArrowRight',
-	'PageUp',
-	'PageDown',
-	'Home',
-	'End',
+	'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight',
+	'PageUp', 'PageDown',
+	'Home', 'End',
 	'Space',
-];
+] as const;
 
-const preventMiddleMouseButton = (e) => e.button === 1 && e.preventDefault();
-const preventEvent = (e) => e.preventDefault();
-const preventScrollByKeyboard = (e) => KEYS_AFFECTING_SCROLL.includes(e.code) && e.preventDefault();
+const preventMiddleMouseButton = (e: MouseEvent) => e.button === 1 && e.preventDefault();
+const preventEvent = (e: Event) => e.preventDefault();
+const preventScrollByKeyboard = (e: KeyboardEvent) => KEYS_AFFECTING_SCROLL.includes(e.code) && e.preventDefault();
 
 /**
  * Disables native scroll interaction events.
- *
- * @returns   {void}
  */
 export const disablePageScroll = () => {
 	const passive = supportsPassive() ? { passive: false } : false;
@@ -32,8 +25,6 @@ export const disablePageScroll = () => {
 
 /**
  * Enables native scroll interaction events.
- *
- * @returns   {void}
  */
 export const enablePageScroll = () => {
 	window.removeEventListener('mousedown', preventMiddleMouseButton);
