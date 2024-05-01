@@ -8,7 +8,7 @@ pre-commit:
   parallel: true
   commands:
     eslint:
-      glob: '*.{js,ts,vue,json,json5,jsonc,yml,yaml,md}'
+      glob: '*.{html,js,ts,vue,json,json5,jsonc,yml,yaml,md}'
       skip: [merge, rebase]
       run: yarn eslint {staged_files} --fix
       stage_fixed: true

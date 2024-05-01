@@ -1,282 +1,285 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-<head>
+	<head>
 
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+		<meta charset="utf-8" />
+		<meta name="description" content="Playground of smooth-scroll package" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
-	<title>SmoothScroll — Playground</title>
+		<title>SmoothScroll — Playground</title>
 
-	<link rel="stylesheet" href="./build/main.css" />
+		<link rel="stylesheet" href="./build/main.css" />
 
-</head>
-<body>
-<div id="root">
+	</head>
+	<body>
+		<div id="root">
 
-	<!-- Test block 1 -->
-	<section id="block-1" class="test-block style-odd">
-		<h2 class="test-block__title">Block 1</h2>
-		<div class="test-block__ruler block-ruler" role="presentation">
-			<span class="block-ruler__division">0</span>
-			<span class="block-ruler__division">10</span>
-			<span class="block-ruler__division">20</span>
-			<span class="block-ruler__division">30</span>
-			<span class="block-ruler__division">40</span>
-			<span class="block-ruler__division">50</span>
-			<span class="block-ruler__division">60</span>
-			<span class="block-ruler__division">70</span>
-			<span class="block-ruler__division">80</span>
-			<span class="block-ruler__division">90</span>
-			<span class="block-ruler__division">100</span>
-		</div>
-	</section>
-
-	<!-- Test block 2 -->
-	<section id="block-2" class="test-block style-even">
-		<h2 class="test-block__title">Block 2</h2>
-		<div class="test-block__ruler block-ruler" role="presentation">
-			<span class="block-ruler__division">0</span>
-			<span class="block-ruler__division">10</span>
-			<span class="block-ruler__division">20</span>
-			<span class="block-ruler__division">30</span>
-			<span class="block-ruler__division">40</span>
-			<span class="block-ruler__division">50</span>
-			<span class="block-ruler__division">60</span>
-			<span class="block-ruler__division">70</span>
-			<span class="block-ruler__division">80</span>
-			<span class="block-ruler__division">90</span>
-			<span class="block-ruler__division">100</span>
-		</div>
-	</section>
-
-	<!-- Sticky block -->
-	<div class="sticky-block pos-start" data-elem="sticky-block" data-align="start"></div>
-
-	<!-- Test block 3 -->
-	<section id="block-3" class="test-block style-odd">
-		<h2 class="test-block__title">Block 3</h2>
-		<div class="test-block__ruler block-ruler" role="presentation">
-			<span class="block-ruler__division">0</span>
-			<span class="block-ruler__division">10</span>
-			<span class="block-ruler__division">20</span>
-			<span class="block-ruler__division">30</span>
-			<span class="block-ruler__division">40</span>
-			<span class="block-ruler__division">50</span>
-			<span class="block-ruler__division">60</span>
-			<span class="block-ruler__division">70</span>
-			<span class="block-ruler__division">80</span>
-			<span class="block-ruler__division">90</span>
-			<span class="block-ruler__division">100</span>
-		</div>
-	</section>
-
-	<!-- Test block 4 -->
-	<section id="block-4" class="test-block style-even style-large">
-
-		<h2 class="test-block__title">Block 4</h2>
-
-		<div class="test-block__inner-block" data-elem="inner-block">
-
-			<p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
-			<p>2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
-			<p>3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
-			<p>4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
-			<p>5 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
-			<p>6 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
-			<p>7 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
-
-			<div class="test-block__inner-block-links">
-				<a href="#" data-use="SmoothScroll" data-scroller="block" data-paragraph="4">Scroll to 4th paragraph</a>
-				<a href="#" data-use="SmoothScroll" data-scroller="block">Scroll to top</a>
-				<br />
-				<a href="#block-1" data-use="SmoothScroll">Scroll page to start</a>
-			</div>
-
-		</div>
-
-		<div class="test-block__ruler block-ruler" role="presentation">
-			<span class="block-ruler__division">0</span>
-			<span class="block-ruler__division">10</span>
-			<span class="block-ruler__division">20</span>
-			<span class="block-ruler__division">30</span>
-			<span class="block-ruler__division">40</span>
-			<span class="block-ruler__division">50</span>
-			<span class="block-ruler__division">60</span>
-			<span class="block-ruler__division">70</span>
-			<span class="block-ruler__division">80</span>
-			<span class="block-ruler__division">90</span>
-			<span class="block-ruler__division">100</span>
-		</div>
-
-	</section>
-
-	<!-- Test block 5 -->
-	<section  id="block-5" class="test-block style-odd">
-		<h2 class="test-block__title">Block 5</h2>
-		<div class="test-block__ruler block-ruler" role="presentation">
-			<span class="block-ruler__division">0</span>
-			<span class="block-ruler__division">10</span>
-			<span class="block-ruler__division">20</span>
-			<span class="block-ruler__division">30</span>
-			<span class="block-ruler__division">40</span>
-			<span class="block-ruler__division">50</span>
-			<span class="block-ruler__division">60</span>
-			<span class="block-ruler__division">70</span>
-			<span class="block-ruler__division">80</span>
-			<span class="block-ruler__division">90</span>
-			<span class="block-ruler__division">100</span>
-		</div>
-	</section>
-
-	<!-- Sticky block -->
-	<div class="sticky-block pos-end" data-elem="sticky-block" data-align="end"></div>
-
-	<!-- Test block 6 -->
-	<section  id="block-6" class="test-block style-even">
-		<h2 class="test-block__title">Block 6</h2>
-		<div class="test-block__ruler block-ruler" role="presentation">
-			<span class="block-ruler__division">0</span>
-			<span class="block-ruler__division">10</span>
-			<span class="block-ruler__division">20</span>
-			<span class="block-ruler__division">30</span>
-			<span class="block-ruler__division">40</span>
-			<span class="block-ruler__division">50</span>
-			<span class="block-ruler__division">60</span>
-			<span class="block-ruler__division">70</span>
-			<span class="block-ruler__division">80</span>
-			<span class="block-ruler__division">90</span>
-			<span class="block-ruler__division">100</span>
-		</div>
-	</section>
-
-	<!-- Test block 7 -->
-	<section id="block-7" class="test-block style-odd style-large">
-		<h2 class="test-block__title">Block 7</h2>
-		<div class="test-block__ruler block-ruler" role="presentation">
-			<span class="block-ruler__division">0</span>
-			<span class="block-ruler__division">10</span>
-			<span class="block-ruler__division">20</span>
-			<span class="block-ruler__division">30</span>
-			<span class="block-ruler__division">40</span>
-			<span class="block-ruler__division">50</span>
-			<span class="block-ruler__division">60</span>
-			<span class="block-ruler__division">70</span>
-			<span class="block-ruler__division">80</span>
-			<span class="block-ruler__division">90</span>
-			<span class="block-ruler__division">100</span>
-		</div>
-	</section>
-
-	<!-- Test block 8 -->
-	<section id="block-8" class="test-block style-even">
-		<h2 class="test-block__title">Block 8</h2>
-		<div class="test-block__ruler block-ruler" role="presentation">
-			<span class="block-ruler__division">0</span>
-			<span class="block-ruler__division">10</span>
-			<span class="block-ruler__division">20</span>
-			<span class="block-ruler__division">30</span>
-			<span class="block-ruler__division">40</span>
-			<span class="block-ruler__division">50</span>
-			<span class="block-ruler__division">60</span>
-			<span class="block-ruler__division">70</span>
-			<span class="block-ruler__division">80</span>
-			<span class="block-ruler__division">90</span>
-			<span class="block-ruler__division">100</span>
-		</div>
-	</section>
-
-	<!-- Toolbar -->
-	<nav class="nav-toolbar">
-
-		<!-- Settings -->
-		<div class="nav-toolbar__settings">
-		<div class="nav-toolbar__settings-inner">
-
-			<!-- Axis -->
-			<div class="nav-toolbar__settings-group">
-
-				<div class="nav-toolbar__settings-group-label">
-					Axis
+			<!-- Test block 1 -->
+			<section id="block-1" class="test-block style-odd">
+				<h2 class="test-block__title">Block 1</h2>
+				<div class="test-block__ruler block-ruler" role="presentation">
+					<span class="block-ruler__division">0</span>
+					<span class="block-ruler__division">10</span>
+					<span class="block-ruler__division">20</span>
+					<span class="block-ruler__division">30</span>
+					<span class="block-ruler__division">40</span>
+					<span class="block-ruler__division">50</span>
+					<span class="block-ruler__division">60</span>
+					<span class="block-ruler__division">70</span>
+					<span class="block-ruler__division">80</span>
+					<span class="block-ruler__division">90</span>
+					<span class="block-ruler__division">100</span>
 				</div>
+			</section>
 
-				<div class="nav-toolbar__settings-group-content">
+			<!-- Test block 2 -->
+			<section id="block-2" class="test-block style-even">
+				<h2 class="test-block__title">Block 2</h2>
+				<div class="test-block__ruler block-ruler" role="presentation">
+					<span class="block-ruler__division">0</span>
+					<span class="block-ruler__division">10</span>
+					<span class="block-ruler__division">20</span>
+					<span class="block-ruler__division">30</span>
+					<span class="block-ruler__division">40</span>
+					<span class="block-ruler__division">50</span>
+					<span class="block-ruler__division">60</span>
+					<span class="block-ruler__division">70</span>
+					<span class="block-ruler__division">80</span>
+					<span class="block-ruler__division">90</span>
+					<span class="block-ruler__division">100</span>
+				</div>
+			</section>
 
-					<div class="nav-toolbar__selector">
-					<div class="nav-toolbar__selector-inner">
+			<!-- Sticky block -->
+			<div class="sticky-block pos-start" data-elem="sticky-block" data-align="start"></div>
 
-						<label class="nav-toolbar__selector-control">
-							<p>X</p>
-							<input type="radio" name="axis" value="x" />
-						</label>
+			<!-- Test block 3 -->
+			<section id="block-3" class="test-block style-odd">
+				<h2 class="test-block__title">Block 3</h2>
+				<div class="test-block__ruler block-ruler" role="presentation">
+					<span class="block-ruler__division">0</span>
+					<span class="block-ruler__division">10</span>
+					<span class="block-ruler__division">20</span>
+					<span class="block-ruler__division">30</span>
+					<span class="block-ruler__division">40</span>
+					<span class="block-ruler__division">50</span>
+					<span class="block-ruler__division">60</span>
+					<span class="block-ruler__division">70</span>
+					<span class="block-ruler__division">80</span>
+					<span class="block-ruler__division">90</span>
+					<span class="block-ruler__division">100</span>
+				</div>
+			</section>
 
-						<label class="nav-toolbar__selector-control">
-							<p>Y</p>
-							<input type="radio" name="axis" value="y" checked />
-						</label>
+			<!-- Test block 4 -->
+			<section id="block-4" class="test-block style-even style-large">
 
-					</div>
+				<h2 class="test-block__title">Block 4</h2>
+
+				<div class="test-block__inner-block" data-elem="inner-block">
+
+					<!-- eslint-disable @stylistic/js/max-len -->
+					<p>1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
+					<p>2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
+					<p>3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
+					<p>4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
+					<p>5 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
+					<p>6 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
+					<p>7 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos saepe similique! Dolore, ipsam magni nam tempore totam dolor et incidunt temporibus iure nemo praesentium? A, voluptatem. Adipisci, consectetur molestiae?</p>
+					<!-- eslint-enable @stylistic/js/max-len -->
+
+					<div class="test-block__inner-block-links">
+						<a href="#" data-use="SmoothScroll" data-scroller="block" data-paragraph="4">Scroll to 4th paragraph</a>
+						<a href="#" data-use="SmoothScroll" data-scroller="block">Scroll to top</a>
+						<br />
+						<a href="#block-1" data-use="SmoothScroll">Scroll page to start</a>
 					</div>
 
 				</div>
 
-			</div>
-
-			<!-- Alignment -->
-			<div class="nav-toolbar__settings-group">
-
-				<div class="nav-toolbar__settings-group-label">
-					Alignment
+				<div class="test-block__ruler block-ruler" role="presentation">
+					<span class="block-ruler__division">0</span>
+					<span class="block-ruler__division">10</span>
+					<span class="block-ruler__division">20</span>
+					<span class="block-ruler__division">30</span>
+					<span class="block-ruler__division">40</span>
+					<span class="block-ruler__division">50</span>
+					<span class="block-ruler__division">60</span>
+					<span class="block-ruler__division">70</span>
+					<span class="block-ruler__division">80</span>
+					<span class="block-ruler__division">90</span>
+					<span class="block-ruler__division">100</span>
 				</div>
 
-				<div class="nav-toolbar__settings-group-content">
+			</section>
 
-					<div class="nav-toolbar__selector">
-					<div class="nav-toolbar__selector-inner">
+			<!-- Test block 5 -->
+			<section id="block-5" class="test-block style-odd">
+				<h2 class="test-block__title">Block 5</h2>
+				<div class="test-block__ruler block-ruler" role="presentation">
+					<span class="block-ruler__division">0</span>
+					<span class="block-ruler__division">10</span>
+					<span class="block-ruler__division">20</span>
+					<span class="block-ruler__division">30</span>
+					<span class="block-ruler__division">40</span>
+					<span class="block-ruler__division">50</span>
+					<span class="block-ruler__division">60</span>
+					<span class="block-ruler__division">70</span>
+					<span class="block-ruler__division">80</span>
+					<span class="block-ruler__division">90</span>
+					<span class="block-ruler__division">100</span>
+				</div>
+			</section>
 
-						<label class="nav-toolbar__selector-control">
-							<p>start</p>
-							<input type="radio" name="alignment" value="start" checked />
-						</label>
+			<!-- Sticky block -->
+			<div class="sticky-block pos-end" data-elem="sticky-block" data-align="end"></div>
 
-						<label class="nav-toolbar__selector-control">
-							<p>center</p>
-							<input type="radio" name="alignment" value="center" />
-						</label>
+			<!-- Test block 6 -->
+			<section id="block-6" class="test-block style-even">
+				<h2 class="test-block__title">Block 6</h2>
+				<div class="test-block__ruler block-ruler" role="presentation">
+					<span class="block-ruler__division">0</span>
+					<span class="block-ruler__division">10</span>
+					<span class="block-ruler__division">20</span>
+					<span class="block-ruler__division">30</span>
+					<span class="block-ruler__division">40</span>
+					<span class="block-ruler__division">50</span>
+					<span class="block-ruler__division">60</span>
+					<span class="block-ruler__division">70</span>
+					<span class="block-ruler__division">80</span>
+					<span class="block-ruler__division">90</span>
+					<span class="block-ruler__division">100</span>
+				</div>
+			</section>
 
-						<label class="nav-toolbar__selector-control">
-							<p>end</p>
-							<input type="radio" name="alignment" value="end" />
-						</label>
+			<!-- Test block 7 -->
+			<section id="block-7" class="test-block style-odd style-large">
+				<h2 class="test-block__title">Block 7</h2>
+				<div class="test-block__ruler block-ruler" role="presentation">
+					<span class="block-ruler__division">0</span>
+					<span class="block-ruler__division">10</span>
+					<span class="block-ruler__division">20</span>
+					<span class="block-ruler__division">30</span>
+					<span class="block-ruler__division">40</span>
+					<span class="block-ruler__division">50</span>
+					<span class="block-ruler__division">60</span>
+					<span class="block-ruler__division">70</span>
+					<span class="block-ruler__division">80</span>
+					<span class="block-ruler__division">90</span>
+					<span class="block-ruler__division">100</span>
+				</div>
+			</section>
+
+			<!-- Test block 8 -->
+			<section id="block-8" class="test-block style-even">
+				<h2 class="test-block__title">Block 8</h2>
+				<div class="test-block__ruler block-ruler" role="presentation">
+					<span class="block-ruler__division">0</span>
+					<span class="block-ruler__division">10</span>
+					<span class="block-ruler__division">20</span>
+					<span class="block-ruler__division">30</span>
+					<span class="block-ruler__division">40</span>
+					<span class="block-ruler__division">50</span>
+					<span class="block-ruler__division">60</span>
+					<span class="block-ruler__division">70</span>
+					<span class="block-ruler__division">80</span>
+					<span class="block-ruler__division">90</span>
+					<span class="block-ruler__division">100</span>
+				</div>
+			</section>
+
+			<!-- Toolbar -->
+			<nav class="nav-toolbar">
+
+				<!-- Settings -->
+				<div class="nav-toolbar__settings">
+					<div class="nav-toolbar__settings-inner">
+
+						<!-- Axis -->
+						<div class="nav-toolbar__settings-group">
+
+							<div class="nav-toolbar__settings-group-label">
+								Axis
+							</div>
+
+							<div class="nav-toolbar__settings-group-content">
+
+								<div class="nav-toolbar__selector">
+									<div class="nav-toolbar__selector-inner">
+
+										<label class="nav-toolbar__selector-control">
+											<p>X</p>
+											<input type="radio" name="axis" value="x" />
+										</label>
+
+										<label class="nav-toolbar__selector-control">
+											<p>Y</p>
+											<input type="radio" name="axis" value="y" checked />
+										</label>
+
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Alignment -->
+						<div class="nav-toolbar__settings-group">
+
+							<div class="nav-toolbar__settings-group-label">
+								Alignment
+							</div>
+
+							<div class="nav-toolbar__settings-group-content">
+
+								<div class="nav-toolbar__selector">
+									<div class="nav-toolbar__selector-inner">
+
+										<label class="nav-toolbar__selector-control">
+											<p>start</p>
+											<input type="radio" name="alignment" value="start" checked />
+										</label>
+
+										<label class="nav-toolbar__selector-control">
+											<p>center</p>
+											<input type="radio" name="alignment" value="center" />
+										</label>
+
+										<label class="nav-toolbar__selector-control">
+											<p>end</p>
+											<input type="radio" name="alignment" value="end" />
+										</label>
+
+									</div>
+								</div>
+
+							</div>
+
+						</div>
 
 					</div>
-					</div>
-
 				</div>
 
-			</div>
+				<!-- Scroll links -->
+				<div class="nav-toolbar__links">
+					<div class="nav-toolbar__links-inner">
+						<a href="#block-1" class="nav-toolbar__links-item" data-use="SmoothScroll">1</a>
+						<a href="#block-2" class="nav-toolbar__links-item" data-use="SmoothScroll">2</a>
+						<a href="#block-3" class="nav-toolbar__links-item" data-use="SmoothScroll">3</a>
+						<a href="#block-4" class="nav-toolbar__links-item" data-use="SmoothScroll">4</a>
+						<a href="#block-5" class="nav-toolbar__links-item" data-use="SmoothScroll">5</a>
+						<a href="#block-6" class="nav-toolbar__links-item" data-use="SmoothScroll">6</a>
+						<a href="#block-7" class="nav-toolbar__links-item" data-use="SmoothScroll">7</a>
+						<a href="#block-8" class="nav-toolbar__links-item" data-use="SmoothScroll">8</a>
+					</div>
+				</div>
+
+			</nav>
+
+			<!-- Scripts -->
+			<script src="./build/main.js"></script>
 
 		</div>
-		</div>
-
-		<!-- Scroll links -->
-		<div class="nav-toolbar__links">
-		<div class="nav-toolbar__links-inner">
-			<a href="#block-1" class="nav-toolbar__links-item" data-use="SmoothScroll">1</a>
-			<a href="#block-2" class="nav-toolbar__links-item" data-use="SmoothScroll">2</a>
-			<a href="#block-3" class="nav-toolbar__links-item" data-use="SmoothScroll">3</a>
-			<a href="#block-4" class="nav-toolbar__links-item" data-use="SmoothScroll">4</a>
-			<a href="#block-5" class="nav-toolbar__links-item" data-use="SmoothScroll">5</a>
-			<a href="#block-6" class="nav-toolbar__links-item" data-use="SmoothScroll">6</a>
-			<a href="#block-7" class="nav-toolbar__links-item" data-use="SmoothScroll">7</a>
-			<a href="#block-8" class="nav-toolbar__links-item" data-use="SmoothScroll">8</a>
-		</div>
-		</div>
-
-	</nav>
-
-	<!-- Scripts -->
-	<script src="./build/main.js"></script>
-
-</div>
-</body>
+	</body>
 </html>
