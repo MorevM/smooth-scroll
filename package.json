@@ -28,18 +28,15 @@
 	"exports": {
 		".": {
 			"import": "./dist/smooth-scroll.mjs",
-			"require": "./dist/smooth-scroll.cjs",
-			"browser": "./dist/smooth-scroll.js"
+			"require": "./dist/smooth-scroll.cjs"
 		},
 		"./native": {
 			"import": "./dist/native.mjs",
-			"require": "./dist/native.cjs",
-			"browser": "./dist/native.js"
+			"require": "./dist/native.cjs"
 		},
 		"./vue": {
 			"import": "./dist/vue.mjs",
-			"require": "./dist/vue.cjs",
-			"browser": "./dist/vue.js"
+			"require": "./dist/vue.cjs"
 		},
 		"./nuxt": {
 			"import": "./dist/nuxt.mjs",
@@ -48,7 +45,6 @@
 	},
 	"main": "./dist/smooth-scroll.cjs",
 	"module": "./dist/smooth-scroll.mjs",
-	"browser": "./dist/smooth-scroll.js",
 	"typesVersions": {
 		"*": {
 			"*": [

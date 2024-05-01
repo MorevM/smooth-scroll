@@ -68,16 +68,6 @@ const scroll = new SmoothScroll({/* custom options */});
 scroll.to('#target-element');
 ```
 
-#### Browser
-
-```html
-<script src="smooth-scroll/dist/smooth-scroll.umd.js"></script>
-<script>
-  const scroll = new SmoothScroll({/* custom options */});
-  scroll.to('#target-element');
-</script>
-```
-
 ### smooth-scroll-native
 
 Uses the native `scrollTo` method with `behavior: smooth`.
@@ -98,16 +88,6 @@ const { SmoothScrollNative } = require('@morev/smooth-scroll/native');
 
 const scroll = new SmoothScrollNative({/* custom options */});
 scroll.to('#target-element');
-```
-
-#### Browser
-
-```html
-<script src="smooth-scroll/dist/smooth-scroll-native.js"></script>
-<script>
-  const scroll = new SmoothScrollNative({/* custom options */});
-  scroll.to('#target-element');
-</script>
 ```
 
 ### Vue.js

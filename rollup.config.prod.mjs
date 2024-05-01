@@ -10,7 +10,6 @@ const DIST_PATH = `${ROOT_PATH}/dist`;
 const formatMappings = [
 	{ format: 'esm', extension: 'mjs' },
 	{ format: 'cjs', extension: 'cjs' },
-	{ format: 'umd', extension: 'js', name: 'SmoothScroll' },
 ];
 
 const processFiles = (...files) => files.reduce((acc, [entry, output]) => {
