@@ -1,6 +1,7 @@
 import { addPluginTemplate, createResolver, defineNuxtModule, isNuxt2 } from '@nuxt/kit';
+import type { PartialOptions } from './types';
 
-export default defineNuxtModule({
+export default defineNuxtModule<PartialOptions>({
 	meta: {
 		name: '@morev/smooth-scroll',
 		configKey: 'smoothScroll',

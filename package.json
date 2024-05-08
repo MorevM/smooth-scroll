@@ -20,45 +20,69 @@
 	},
 	"bugs": {
 		"url": "https://github.com/MorevM/smooth-scroll/issues"
-	}, "keywords": [
+	},
+	"keywords": [
 		"scroll",
 		"scrolling",
 		"smooth scroll"
 	],
 	"files": [
-		"dist",
-		"types"
+		"dist"
 	],
 	"exports": {
 		".": {
-			"import": "./dist/smooth-scroll.mjs",
-			"require": "./dist/smooth-scroll.cjs"
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/lib/index.js"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/lib/index.cjs"
+			}
 		},
-		"./native": {
-			"import": "./dist/native.mjs",
-			"require": "./dist/native.cjs"
+		"./smooth-scroll": {
+			"import": {
+				"types": "./dist/lib/smooth-scroll.d.ts",
+				"default": "./dist/lib/smooth-scroll.js"
+			},
+			"require": {
+				"types": "./dist/lib/smooth-scroll.d.cts",
+				"default": "./dist/lib/smooth-scroll.cjs"
+			}
+		},
+		"./smooth-scroll-native": {
+			"import": {
+				"types": "./dist/lib/smooth-scroll-native.d.ts",
+				"default": "./dist/lib/smooth-scroll-native.js"
+			},
+			"require": {
+				"types": "./dist/lib/smooth-scroll-native.d.cts",
+				"default": "./dist/lib/smooth-scroll-native.cjs"
+			}
 		},
 		"./vue": {
-			"import": "./dist/vue.mjs",
-			"require": "./dist/vue.cjs"
+			"import": {
+				"types": "./dist/vue.d.ts",
+				"default": "./dist/vue.js"
+			},
+			"require": {
+				"types": "./dist/vue.d.cts",
+				"default": "./dist/vue.cjs"
+			}
 		},
 		"./nuxt": {
-			"import": "./dist/nuxt.mjs",
-			"require": "./dist/nuxt.cjs"
+			"import": {
+				"types": "./dist/nuxt.d.ts",
+				"default": "./dist/nuxt.js"
+			},
+			"require": {
+				"types": "./dist/nuxt.d.cts",
+				"default": "./dist/nuxt.cjs"
+			}
 		}
 	},
-	"main": "./dist/smooth-scroll.cjs",
-	"module": "./dist/smooth-scroll.mjs",
-	"typesVersions": {
-		"*": {
-			"*": [
-				"./types/smooth-scroll.d.ts"
-			],
-			"native": [
-				"./types/smooth-scroll-native.d.ts"
-			]
-		}
-	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
 	"scripts": {
 		"dev": "yarn _compile:dev",
 		"build": "yarn _compile:prod && cp ./src/nuxt-plugin.js ./dist/nuxt-plugin.js",
@@ -73,7 +97,7 @@
 		"test": "nyc playwright test --forbid-only",
 		"test:dev": "chokidar \"__tests__/tests/**/*.spec.js\" -c \"playwright test\"",
 		"_compile:dev": "rollup --config rollup.config.dev.mjs --environment NODE_ENV:development --watch",
-		"_compile:prod": "rollup --config rollup.config.prod.mjs --environment NODE_ENV:production",
+		"_compile:prod": "tsup",
 		"_compile:test": "rollup --config rollup.config.dev.mjs --environment NODE_ENV:test",
 		"_more-sass-clone": "rm -rf .more-sass/ && cp -r node_modules/more-sass .more-sass/"
 	},
@@ -109,6 +133,7 @@
 		"rollup-plugin-typescript2": "^0.36.0",
 		"sass": "^1.74.1",
 		"stylelint": "^16.3.1",
+		"tsup": "^8.0.2",
 		"typescript": "^5.4.4"
 	}
 }
