@@ -1,5 +1,12 @@
 
 
+## [2.0.3](https://github.com/MorevM/smooth-scroll/compare/v2.0.2...v2.0.3) (2024-05-21)
+
+
+### Bug fixes
+
+* **nuxt:** Import name within nuxt plugin ([02e2531](https://github.com/MorevM/smooth-scroll/commit/02e253197e8d7c448871c3bf2a02eccdba44873d))
+
 ## [2.0.2](https://github.com/MorevM/smooth-scroll/compare/v2.0.1...v2.0.2) (2024-05-21)
 
 
