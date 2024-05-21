@@ -1,5 +1,12 @@
 
 
+## [2.0.2](https://github.com/MorevM/smooth-scroll/compare/v2.0.1...v2.0.2) (2024-05-21)
+
+
+### Bug fixes
+
+* Types path within `package.json` ([33c74af](https://github.com/MorevM/smooth-scroll/commit/33c74affdebee863e75cdd18bb83659f76964cd3))
+
 ## [2.0.1](https://github.com/MorevM/smooth-scroll/compare/v2.0.0...v2.0.1) (2024-05-21)
 
 
