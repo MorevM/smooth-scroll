@@ -141,6 +141,39 @@ export type PartialOptions = Omit<Partial<Options>, 'offset' | 'fixedElements'>
 	& { offset?: Partial<Options['offset']> }
 	& { fixedElements?: PartialDeep<Options['fixedElements']> };
 
+export type NuxtModuleOptions = PartialOptions & {
+	/**
+	 * Use `SmoothScrollNative` instead of `SmoothScroll`.
+	 *
+	 * @default false
+	 */
+	native?: boolean;
+
+	/**
+	 * The name of the global property to access `SmoothScroll` instance. \
+	 * It prefixed by `$` sign by default.
+	 *
+	 * @example
+	 * this.$scroller.addFixedElements(...)
+	 *
+	 * @default 'scroller'
+	 */
+	instanceName?: string;
+
+	/**
+	 * The name of the `to` method bound to the `SmoothScroll` instance.
+	 * Just a shorthand for the most common usage. \
+	 * It prefixed by `$` sign by default.
+	 *
+	 * @example
+	 * this.$scrollTo(0);
+	 * this.$scrollTo(this.$refs.someRef);
+	 *
+	 * @default 'scrollTo'
+	 */
+	methodName?: string;
+};
+
 export type _NormalizedOptions = Omit<Options, 'offset'> & {
 	offset: { x: number; y: number };
 };

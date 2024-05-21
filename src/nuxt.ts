@@ -1,24 +1,27 @@
-import { addPluginTemplate, createResolver, defineNuxtModule, isNuxt2 } from '@nuxt/kit';
-import { isArray } from '@morev/utils';
-import type { PartialOptions } from './types';
+import { resolve } from 'node:path';
+import { addPluginTemplate, defineNuxtModule, isNuxt2 } from '@nuxt/kit';
+import { isArray, omit } from '@morev/utils';
+import type { NuxtModuleOptions } from './types';
 
 const BABEL_PLUGIN_NAME = '@babel/plugin-transform-logical-assignment-operators';
 const SCOPE = '@morev';
 const MODULE_NAME = `${SCOPE}/smooth-scroll`;
 
-export default defineNuxtModule<PartialOptions>({
+export default defineNuxtModule<NuxtModuleOptions>({
 	meta: {
-		name: '@morev/smooth-scroll',
+		name: MODULE_NAME,
 		configKey: 'smoothScroll',
 		compatibility: {
 			nuxt: '>= 2.17.0 || >=3.5.0',
 		},
 	},
-	defaults: {},
+	defaults: {
+		native: false,
+		instanceName: 'scroller',
+		methodName: 'scrollTo',
+	},
 	hooks: {},
 	setup(options, nuxt) {
-		const resolver = createResolver(import.meta.url);
-
 		// This is necessary because the package uses utilities
 		// that use modern syntax and have not been transpiled.
 		if (isNuxt2()) {
@@ -38,10 +41,13 @@ export default defineNuxtModule<PartialOptions>({
 		}
 
 		addPluginTemplate({
-			src: resolver.resolve('nuxt-plugin.js'),
+			src: resolve(__dirname, 'nuxt-plugin.js'),
 			filename: 'smooth-scroll-plugin.client.js',
 			options: {
-				options,
+				options: omit(options, 'methodName', 'instanceName', 'native'),
+				instanceName: options.instanceName,
+				methodName: options.methodName,
+				importName: options.native ? 'SmoothScrollNative' : 'SmoothScroll',
 				isNuxt2: isNuxt2(),
 			},
 		});
