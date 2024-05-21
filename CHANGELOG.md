@@ -1,5 +1,46 @@
 
 
+## [2.0.0](https://github.com/MorevM/smooth-scroll/compare/v1.0.0...v2.0.0) (2024-05-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **nuxt:** A new injectable property 'instanceName' (default 'scroller') has been added to allow access to the SmoothScroll instance in the Nuxt plugin. The 'scroll' method is now called 'scrollTo' and can also be configured.
+* Exports has been changed. \
+`/native` has been renamed to `./smooth-scroll-native`, the default export has been replaced by catch-all export, previous default export is available as `./smooth-scroll`.
+* UMD version of the package is no longer exists. Consider using bundler. \
+The plugin will also no longer be installed in the Vue global space.
+* The package is no longer transpiled and minified. \
+Now you have to set the transpiration settings yourself.
+
+### Features
+
+* **nuxt:** Allow access to SmoothScroll instance, allow to change the names ([47175c0](https://github.com/MorevM/smooth-scroll/commit/47175c06ee4bb5491535e4fd7d5235118129d389))
+
+### Refactoring
+
+* Change the export names, use `tsup` as a production version builder ([0487409](https://github.com/MorevM/smooth-scroll/commit/0487409991b13f513c5957793fea824d2e26fd3c))
+* Get rid of UMD version and Vue global installation feature ([cc6d3f6](https://github.com/MorevM/smooth-scroll/commit/cc6d3f689e42b998f26407d4bb6a3cd5adba64e8))
+* Rewrite the repo to Typescript ([b187c21](https://github.com/MorevM/smooth-scroll/commit/b187c21095c6dbc278c28cc833ecb6a7bbd10f17))
+
+
+### Bug fixes
+
+* **nuxt:** Ensure Nuxt version is running normally ([f739c6f](https://github.com/MorevM/smooth-scroll/commit/f739c6f4dd7d35eeefecc8a75b5c1f894e44fbc5))
+
+
+### Chores
+
+* Mark the module as side-effects free ([a5464e1](https://github.com/MorevM/smooth-scroll/commit/a5464e1599f385be827a5990c70d30a9e67e11ea))
+* Remove babel and terser ([cb736bb](https://github.com/MorevM/smooth-scroll/commit/cb736bb2777fea688365267f20d4998818838ff3))
+* Replace `@morev/helpers` package with updated `@morev/utils` ([b5cb06b](https://github.com/MorevM/smooth-scroll/commit/b5cb06b09f7fac0c6a149eb242cfdee252fe9698))
+
+
+### CI improvements
+
+* Extract the latest changelog entry to Github Release ([9bcc7db](https://github.com/MorevM/smooth-scroll/commit/9bcc7db536d74d4bef4b38828381a6ff7bbc980e))
+* Run actions using Node 20 ([23d0ba3](https://github.com/MorevM/smooth-scroll/commit/23d0ba305c55d5736a3fd07d808e4bd19f9d481a))
+
 ## [1.0.0](https://github.com/MorevM/smooth-scroll/compare/v0.1.2...v1.0.0) (2024-01-12)
 
 
