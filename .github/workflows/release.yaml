@@ -44,6 +44,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          body: ${{steps.latest-changelog-entry.outputs.result}}
 
       - name: Publish package
         run: yarn publish --access public
