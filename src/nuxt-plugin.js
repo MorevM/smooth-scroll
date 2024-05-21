@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import { <%= options.importName %> as Instance } from '@local-morev/smooth-scroll';
+import { <%= options.importName %> as Instance } from '@morev/smooth-scroll';
 
 const scroller = new Instance(<%= JSON.stringify(options.options || {}) %>);
 
