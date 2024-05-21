@@ -1,5 +1,17 @@
 
 
+## [2.0.1](https://github.com/MorevM/smooth-scroll/compare/v2.0.0...v2.0.1) (2024-05-21)
+
+
+### CI improvements
+
+* Include latest changelog entry to GH release :\ ([8ae210c](https://github.com/MorevM/smooth-scroll/commit/8ae210c8fc6e89d0c5dddff7d798e0638da3d3e0))
+
+
+### Bug fixes
+
+* Expose module types ([3bc68dc](https://github.com/MorevM/smooth-scroll/commit/3bc68dc464cd55d5bbc3e97daaf4535552f63f74))
+
 ## [2.0.0](https://github.com/MorevM/smooth-scroll/compare/v1.0.0...v2.0.0) (2024-05-21)
 
 
