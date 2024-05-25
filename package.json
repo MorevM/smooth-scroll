@@ -109,7 +109,7 @@
 	"devDependencies": {
 		"@istanbuljs/load-nyc-config": "^1.1.0",
 		"@morev/commitlint-config": "^0.2.2",
-		"@morev/eslint-config": "^31.0.2",
+		"@morev/eslint-config": "^33.0.0",
 		"@morev/stylelint-config": "^5.4.1",
 		"@playwright/test": "^1.43.0",
 		"@release-it/conventional-changelog": "^8.0.1",
