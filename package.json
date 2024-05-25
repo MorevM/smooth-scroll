@@ -134,6 +134,6 @@
 		"sass": "^1.74.1",
 		"stylelint": "^16.3.1",
 		"tsup": "^8.0.2",
-		"typescript": "^5.4.4"
+		"typescript": "^5.4.5"
 	}
 }
