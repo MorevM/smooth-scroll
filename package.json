@@ -111,7 +111,7 @@
 		"@morev/commitlint-config": "^0.2.2",
 		"@morev/eslint-config": "^31.0.2",
 		"@morev/stylelint-config": "^5.4.1",
-		"@playwright/test": "^1.43.0",
+		"@playwright/test": "^1.44.1",
 		"@release-it/conventional-changelog": "^8.0.1",
 		"@rollup/plugin-commonjs": "^25.0.7",
 		"@rollup/plugin-node-resolve": "^15.2.3",
