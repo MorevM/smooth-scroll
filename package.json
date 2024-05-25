@@ -123,7 +123,7 @@
 		"nyc": "^15.1.0",
 		"postcss": "^8.4.38",
 		"postcss-discard-comments": "^6.0.2",
-		"postcss-discard-duplicates": "^6.0.3",
+		"postcss-discard-duplicates": "^7.0.0",
 		"postcss-preset-env": "^9.5.4",
 		"release-it": "^17.1.1",
 		"rollup": "^4.14.1",
