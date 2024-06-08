@@ -102,7 +102,7 @@
 		"_more-sass-clone": "rm -rf .more-sass/ && cp -r node_modules/more-sass .more-sass/"
 	},
 	"dependencies": {
-		"@morev/utils": "^3.9.0",
+		"@morev/utils": "^3.11.0",
 		"@nuxt/kit": "^3.11.2",
 		"js-easing-functions": "^1.0.3"
 	},
