@@ -133,7 +133,7 @@
 		"rollup-plugin-typescript2": "^0.36.0",
 		"sass": "^1.74.1",
 		"stylelint": "^16.3.1",
-		"tsup": "^8.0.2",
+		"tsup": "^8.1.0",
 		"typescript": "^5.4.4"
 	}
 }
