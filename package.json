@@ -103,7 +103,7 @@
 	},
 	"dependencies": {
 		"@morev/utils": "^3.9.0",
-		"@nuxt/kit": "^3.11.2",
+		"@nuxt/kit": "^3.12.2",
 		"js-easing-functions": "^1.0.3"
 	},
 	"devDependencies": {
